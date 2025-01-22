@@ -248,7 +248,7 @@ table.pricelist {
         font-size: 1.1rem;
         align-items:center;
         background-color:rgba(0, 0, 0, 0.589);
-        width: 90%;
+        width: 100%;
         max-width: 1080px;
         margin: 10px auto;
         padding: 30px;
@@ -260,7 +260,7 @@ table.pricelist {
     .products{
         display:grid;
         grid-template-columns: repeat(2,1fr);
-        gap: 80px;
+        gap: 45px;
         justify-items:center;
         color: black;
     }
