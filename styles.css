@@ -349,3 +349,12 @@ table.pricelist {
         padding: 7px;
     }
 }
+
+/* Etusivu */
+
+.text-container {
+    background: rgba(0, 0, 0, 0.60); 
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
