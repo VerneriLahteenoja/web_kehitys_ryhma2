@@ -168,22 +168,24 @@ table.pricelist {
     width: 250px;
     height: 250px;
     text-align:center;
-    border: 1px solid #141414;
+    border: 2px solid #ff0000;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .product h3{
-    margin-top: -10px;
+    font-size: 1.25rem;
+    margin-top: -15px;
     color:#141414;
-    font-size: 1.5rem;
 }
 
 .product p{
-    margin-top: -7px;
+    font-size: 1.1rem;
+    margin-top: -10px;
     color:#141414
 }
 
 .product img{
+    margin-top:-9px;
     width:200px;
     height:200px;
 }
@@ -191,7 +193,7 @@ table.pricelist {
 .product-heading {
     color:white;
     text-transform:uppercase;
-    margin-top: 0px;
+    margin-top: -10px;
     text-align:center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-shadow:1px 1px #000000;
@@ -199,24 +201,24 @@ table.pricelist {
 }
 @media (max-width: 768px) {
     header{
+        display:flex;
         flex-direction:column;
-        align-items:center;
+        
     }
 
     header img{
-        margin-top: 10px;
-        max-width: 70px;
-        margin-left: -400px;
+        width:auto;
+        height:auto;
+        margin-bottom: -38px;
+        margin-right:260px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     header h1{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        margin-left: 10px;
-        align-items:center;
-        margin-top:-50px;
-        color: rgb(255, 255, 255);
-        text-align:center;
+        font-size:1.4rem;
+        margin-right: -240px;
+        margin-bottom: 15px;
     }
 
     nav ul li a{
@@ -237,7 +239,7 @@ table.pricelist {
     .products-container{
         display:flex;
         flex-direction:column;
-        font-size: 1.1rem;
+        font-size: 0.8em;
         align-items:center;
         background-color:rgba(0, 0, 0, 0.589);
         width: 100%;
@@ -264,22 +266,22 @@ table.pricelist {
         width: 150px;
         height: 150px;
         text-align:center;
-        border: 1px solid #141414;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border: 1px solid #000000;
     }
     .product h3{
-        font-size: 1.05em;
+        font-size: 0.75rem;
         margin-top: auto 0px;
         color:#141414;
     }
     
     .product p{
-        margin-top: -5px;
+        font-size: 0.66rem;
+        margin-top: -2px;
         color:#141414
     }
 
     .product img{
-        margin-top: -7px;
+        margin-top: -5px;
         width:110px;
         height:110px;
     }
@@ -287,7 +289,7 @@ table.pricelist {
     .product-heading{
         color:white;
         text-transform:uppercase;
-        margin-top: 0px;
+        margin-top: -15px;
         text-align:center;
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         text-shadow:1px 1px #000000;
@@ -314,6 +316,7 @@ table.pricelist {
 }
 
 @media (max-width: 768px) {
+   
     header {
         flex-direction: column;
         align-items: center;
