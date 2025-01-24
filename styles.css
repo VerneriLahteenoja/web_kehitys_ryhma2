@@ -143,7 +143,7 @@ table.pricelist {
     flex-direction:column;
     font-size: 1.2rem;
     align-items:center;
-    background-color:rgba(0, 0, 0, 0.589);
+    background-color:rgba(0, 0, 0, 0.60);
     width: 80%;
     max-width: 1080px;
     margin: 10px auto;
@@ -241,7 +241,7 @@ table.pricelist {
         flex-direction:column;
         font-size: 0.8em;
         align-items:center;
-        background-color:rgba(0, 0, 0, 0.589);
+        background-color:rgba(0, 0, 0, 0.60);
         width: 100%;
         max-width: 1080px;
         margin: 10px auto;
@@ -336,6 +336,9 @@ table.pricelist {
     nav ul li a {
         font-size: 1rem;
         padding: 7px;
+    }
+    .yhteystiedot-lista{
+        background: rgba(0, 0, 0, 0.60); 
     }
 }
 
