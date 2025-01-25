@@ -20,12 +20,16 @@ header{
     justify-content:center;
     flex-direction:row;
     text-align:center;
-    height: 100px;
+    height: 110px;
     border-bottom: 2px solid #ff0000;
 }
 
 header img{
-    margin-left: -550px;
+    max-width:250px;
+    margin-top:-4px;
+    width:135px;
+    height:110px;
+    margin-left:0px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: 2px solid #ff0000;
     border-radius: 50%;
@@ -117,14 +121,12 @@ table.pricelist {
     }
 
     header img {
-        margin-left: 0;
-        max-width: 70px;
-    }
-
-    header h1 {
-        margin-left: 0;
-        margin-top: 10px;
-        font-size: 1.2rem;
+        margin-bottom:70px;
+        margin-left:0;
+        max-width:none;
+        width:90px;
+        height:90px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     nav ul li a {
@@ -224,24 +226,19 @@ table.pricelist {
 }
 @media (max-width: 768px) {
     header{
-        display:flex;
         flex-direction:column;
+        align-items:center;
+        height:100px;
         
     }
 
     header img{
-        width:auto;
-        height:auto;
-        margin-bottom: -38px;
-        margin-right:260px;
+        margin-bottom:70px;
+        margin-left:0;
+        max-width:none;
+        width:90px;
+        height:90px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    header h1{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size:1.4rem;
-        margin-right: -240px;
-        margin-bottom: 15px;
     }
 
     nav ul li a{
@@ -289,7 +286,8 @@ table.pricelist {
         width: 150px;
         height: 150px;
         text-align:center;
-        border: 1px solid #000000;
+        border: 2px solid #ff0000;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .product h3{
         font-size: 0.75rem;
@@ -346,14 +344,11 @@ table.pricelist {
     }
 
     header img {
-        margin-left: 0;
-        max-width: 70px;
-    }
-
-    header h1 {
-        margin-left: 0;
-        margin-top: 10px;
-        font-size: 1.2rem;
+        max-width:none;
+        margin-top:70px;
+        width:100px;
+        height:100px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     nav ul li a {
@@ -372,4 +367,20 @@ table.pricelist {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    header{
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    header img {
+        margin-bottom:70px;
+        margin-left:0;
+        max-width:none;
+        width:90px;
+        height:90px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 }
