@@ -1,84 +1,80 @@
-body{
+body {
     background-image: url('./Kuvat/productsbackground.jpg');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:rgb(95, 95, 95);
+    background-color: rgb(95, 95, 95);
     min-height: 100vh;
     color: white;
 }
 
-header{
+header {
     background: linear-gradient(to bottom, #272727, #141414);
-    color:azure;
+    color: azure;
     padding: 5px;
-    display:flex;
-    justify-content:center;
-    flex-direction:row;
-    text-align:center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
     height: 110px;
     border-bottom: 2px solid #ff0000;
 }
 
-header img{
-    max-width:250px;
-    margin-top:-4px;
-    width:100px;
-    height:100px;
-    margin-left:0px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+header img {
+    max-width: 250px;
+    margin-top: -4px;
+    width: 100px;
+    height: 100px;
+    margin-left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid #ff0000;
     border-radius: 50%;
 }
 
-header h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+header h1 {
     margin-left: 10px;
-    align-items:center;
-    margin-top:25px;
+    align-items: center;
+    margin-top: 25px;
     color: rgb(255, 255, 255);
-    text-align:center;
+    text-align: center;
 }
 
-p{
-    text-align:center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+p {
+    text-align: center;
     margin: 5px;
     color: rgb(255, 255, 255);
-    
 }
 
-footer{
+footer {
     background: linear-gradient(to bottom, #272727, #141414);
-    text-align:center;
+    text-align: center;
     padding: 5px 0;
-    position:fixed;
+    position: fixed;
     bottom: 0;
-    width:100%;
+    width: 100%;
     border-top: 2px solid #ff0000;
 }
 
-nav{
-    text-align:right;
-    background-color:#272727;
+nav {
+    text-align: right;
+    background-color: #272727;
     overflow: hidden;
-    display:flex;
+    display: flex;
     justify-content: flex-end;
-    align-items:stretch;
+    align-items: stretch;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .nav-link {
     color: #ffffff;
-    text-transform:uppercase;
-    padding: 14px 14px;
+    text-transform: uppercase;
+    padding: 14px;
     font-size: 1.4em;
-    display:flex;
+    display: flex;
     margin-right: 10px;
 }
 
@@ -86,22 +82,17 @@ nav{
     color: #ff0000 !important;
 }
 
-.nav-login {
-    background-color:rgb(255, 0, 0, 0.30);
+.nav-login, .nav-register {
+    background-color: rgba(255, 0, 0, 0.30);
     border-radius: 5px;
     margin-right: 10px;
 }
-    
-.nav-register {
-    background-color:rgb(255, 0, 0, 0.30);
-    border-radius: 5px;
-}
 
-/*Hinnasto*/
+/* Hinnasto */
 
 table.pricelist {
     font-size: 2.5rem;
-    background: rgba(0, 0, 0, 0.60); 
+    background: rgba(0, 0, 0, 0.60);
     border: 1px solid white;
 }
 
@@ -110,23 +101,123 @@ table.pricelist {
     display: inline-block;
     padding: 7px;
     font-size: 3rem;
-    background: rgba(0, 0, 0, 0.60); 
+    background: rgba(0, 0, 0, 0.60);
     border: 1px solid white;
 }
+
+/* Tuotteet */
+
+.products-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.60);
+    width: 80%;
+    max-width: 1080px;
+    margin: 10px auto;
+    padding: 30px;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.329);
+    border-radius: 10px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    justify-items: center;
+    color: black;
+}
+
+.product {
+    background-color: white;
+    border-radius: 10%;
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    border: 2px solid #ff0000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product h3 {
+    font-size: 1.25rem;
+    margin-top: -15px;
+    color: #141414;
+}
+
+.product p {
+    font-size: 1.1rem;
+    margin-top: -10px;
+    color: #141414;
+}
+
+.product img {
+    margin-top: -9px;
+    width: 200px;
+    height: 200px;
+}
+
+.product-heading {
+    color: white;
+    text-transform: uppercase;
+    margin-top: -10px;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+    font-size: 32px;
+}
+
+/* Yhteystiedot */
+
+.yhteystiedot-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 20px;
+    list-style: none;
+    float: left;
+    font-size: 2.5rem;
+    background: rgba(0, 0, 0, 0.60);
+    margin-top: 120px;
+}
+
+.yhteystiedot-kuva {
+    max-width: 100%;
+    float: right;
+    margin-top: 50px;
+}
+
+.yhteystiedot-h2 {
+    background: rgba(0, 0, 0, 0.60);
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Etusivu */
+
+.text-container {
+    background: rgba(0, 0, 0, 0.60);
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Media */
 
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
+        height: 100px;
     }
 
     header img {
-        margin-bottom:70px;
-        margin-left:0;
-        max-width:none;
-        width:90px;
-        height:90px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        max-width: none;
+        width: 90px;
+        height: 90px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     nav ul li a {
@@ -147,240 +238,83 @@ table.pricelist {
         height: auto;
     }
 
-    .nav-login {
+    .nav-login, .nav-register {
         width: 100%;
         font-size: 1rem;
         margin: 10px 0;
     }
-    
-    .nav-register {
-        width: 100%;
-        font-size: 1rem;
-        margin: 10px 0;
-    }
-}
 
-/*Tuotteet*/
-
-
-.products-container{
-    display:flex;
-    flex-direction:column;
-    font-size: 1.2rem;
-    align-items:center;
-    background-color:rgba(0, 0, 0, 0.60);
-    width: 80%;
-    max-width: 1080px;
-    margin: 10px auto;
-    padding: 30px;
-    justify-content:center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.329);
-    border-radius: 10px;
-}
-
-.products{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 100px;
-    justify-items:center;
-    color: black;
-}
-
-.product{
-    background-color:white;
-    border-radius:10%;
-    padding: 20px;
-    width: 250px;
-    height: 250px;
-    text-align:center;
-    border: 2px solid #ff0000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.product h3{
-    font-size: 1.25rem;
-    margin-top: -15px;
-    color:#141414;
-}
-
-.product p{
-    font-size: 1.1rem;
-    margin-top: -10px;
-    color:#141414
-}
-
-.product img{
-    margin-top:-9px;
-    width:200px;
-    height:200px;
-}
-
-.product-heading {
-    color:white;
-    text-transform:uppercase;
-    margin-top: -10px;
-    text-align:center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow:1px 1px #000000;
-    font-size: 32px;
-}
-@media (max-width: 768px) {
-    header{
-        flex-direction:column;
-        align-items:center;
-        height:100px;
-        
-    }
-
-    header img{
-        margin-bottom:70px;
-        margin-left:0;
-        max-width:none;
-        width:90px;
-        height:90px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    nav ul li a{
-        font-size: 1rem;
-        padding: 10px 7px;
-    }
-
-    body{
+    body {
         background-image: url('./Kuvat/productsbackgroundmobile.jpg');
-        background-size:cover;
-        background-position:fixed;
+        background-size: cover;
+        background-position: fixed;
         background-repeat: no-repeat;
-        min-height:100vh;
+        min-height: 100vh;
         margin: 0;
         padding: 0;
     }
 
-    .products-container{
-        display:flex;
-        flex-direction:column;
+    .products-container {
         font-size: 0.8em;
-        align-items:center;
-        background-color:rgba(0, 0, 0, 0.60);
         width: 100%;
-        max-width: 1080px;
-        margin: 10px auto;
-        padding: 30px;
-        justify-content:center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.329);
-        border-radius: 10px;
     }
 
-    .products{
-        display:grid;
-        grid-template-columns: repeat(2,1fr);
+    .products {
+        grid-template-columns: repeat(2, 1fr);
         gap: 45px;
-        justify-items:center;
-        color: black;
     }
 
-    .product{
-        background-color:white;
-        border-radius:10%;
-        padding: 20px;
+    .product {
         width: 150px;
         height: 150px;
-        text-align:center;
-        border: 2px solid #ff0000;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .product h3{
+
+    .product h3 {
         font-size: 0.75rem;
-        margin-top: auto 0px;
-        color:#141414;
+        margin-top: auto 0;
     }
-    
-    .product p{
+
+    .product p {
         font-size: 0.66rem;
         margin-top: -2px;
-        color:#141414
     }
 
-    .product img{
-        margin-top: -5px;
-        width:110px;
-        height:110px;
+    .product img {
+        width: 110px;
+        height: 110px;
     }
-    
-    .product-heading{
-        color:white;
-        text-transform:uppercase;
-        margin-top: -15px;
-        text-align:center;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        text-shadow:1px 1px #000000;
+
+    .product-heading {
         font-size: 26px;
+        margin-top: -15px;
+    }
+
+    .yhteystiedot-lista {
+        font-size: 1.4rem;
+        background: rgba(0, 0, 0, 0.60);
+        margin-top: 100px;
+    }
+
+    .yhteystiedot-kuva {
+        margin-top: 10px;
+        width: 90%;
+    }
+
+    .yhteystiedot-h2 {
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .text-container {
+        font-size: 0.8rem;
     }
 }
 
-
-/*Yhteystiedot*/
-
-.yhteystiedot-lista {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin-top: 20px;
-    list-style: none;
-    float: left;
-    font-size: 2.5rem;
-}
-
-.yhteystiedot-kuva {
-    max-width: 100%;
-    float: right;
-}
-
-@media (max-width: 768px) {
-   
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header img {
-        max-width:none;
-        margin-top:70px;
-        width:90px;
-        height:90px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-        padding: 7px;
-    }
-    .yhteystiedot-lista{
-        background: rgba(0, 0, 0, 0.60); 
-    }
-}
-
-/* Etusivu */
-
-.text-container {
-    background: rgba(0, 0, 0, 0.60); 
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    header{
-        flex-direction: column;
-        align-items: center; 
-    }
-
-    header img {
-        margin-bottom:70px;
-        margin-left:0;
-        max-width:none;
-        width:90px;
-        height:90px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+@media (max-width: 1024px) {
+    .nav-link {
+        font-size: 0.75rem;
     }
 }
