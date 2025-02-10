@@ -1,0 +1,13 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.card {
+    text-align: center;
+}
+
+.adminh1 {
+    text-align: center;
+    padding: 50px;
+}
