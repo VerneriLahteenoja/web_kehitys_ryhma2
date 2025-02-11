@@ -1,3 +1,8 @@
+<?php
+include 'admin/settings.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -6,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Etusivu</title>
+    <title>Tuotteet</title>
 </head>
 <body>
     <header>
@@ -34,10 +39,10 @@
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-login">
-                        <a class="nav-link" href="loginPage.html">Kirjaudu</a>
+                        <a class="nav-link" href="#">Kirjaudu</a>
                     </li>
                     <li class="nav-register">
-                        <a class="nav-link" href="registrationPage.html">Rekisteröidy</a>
+                        <a class="nav-link" href="#">Rekisteröidy</a>
                     </li>
                 </ul>
             </div>
@@ -47,24 +52,36 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </nav>
-    <section class="etusivu">
-        <div class="text-container">
-            <h2>Kyykkyluola</h2>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam numquam ipsum dicta! Culpa repudiandae adipisci sapiente illo? 
-                Tenetur repellat excepturi dolore consectetur, rerum, libero est nostrum error molestiae, maxime nobis! Lorem ipsum dolor sit amet, 
-                consectetur adipisicing elit. Libero asperiores repellat laboriosam, accusamus quis consectetur quos? Vero, cum corporis qui 
-                molestiae &lt; quis error autem beatae suscipit eveniet ipsam quas. Architecto? Lorem ipsum, dolor sit amet consectetur adipisicing 
-                elit. Aliquid nisi adipisci tenetur? Reiciendis nesciunt officia deserunt exercitationem est doloremque officiis? Obcaecati, eveniet 
-                assumenda? Sint porro cumque asperiores inventore repellendus vero? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui eos, 
-                architecto tempora laborum ex harum beatae nostrum dignissimos. Quae optio error incidunt aut esse corrupti deserunt omnis aliquid ab 
-                laborum? 
-            </p>
-        </div>
-    </section>
-    <footer>
+<main>
+    <section class="products-container">
+    <h2 class="product-heading"><strong>Tuotteet</strong></h2>
+    <div class="products">
+        <?php
+        $sql= "SELECT id, nimi, hinta, arvostelu, kuva FROM Tuotteet";
+        $stmt=$pdo->prepare($sql);
+        $stmt->execute();
+        $tuotteet=$stmt->fetchAll(PDO::FETCH_ASSOC);
+        ?>
+
+        <?php if($tuotteet) { ?>
+            <?php foreach ($tuotteet as $tuote) { ?>
+            <div class="product">
+                <a href="product.php?id=<?php echo $tuote['id']; ?>">Näytä Tuote</a>
+                    <img src="kuvat/<?php echo htmlspecialchars($tuote['kuva']); ?>" alt="<?php echo htmlspecialchars($tuote['nimi']); ?>">
+                    <h2><?php echo htmlspecialchars($tuote['nimi']); ?></h2>
+                <p>Hinta: €<?php echo htmlspecialchars($tuote['hinta']); ?></p>
+            </div>
+        <?php   } ?>
+    <?php } else { ?>
+        <p>Tuotteita ei löytynyt.</p>
+    <?php } ?>
+</div>
+</div>
+</section>
+ </main>
+ <footer>
         <p>&copy; 2025 Kyykkyluola.</p>
-    </footer>
-    
+ </footer>
+ 
 </body>
 </html>

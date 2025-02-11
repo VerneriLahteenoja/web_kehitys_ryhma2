@@ -36,7 +36,8 @@
         </div>
     </nav>
 <div class="container">
-    <form class="col-md-4" action="login.php" method="POST">
+    <form class="col-md-4" action="register.php" method="POST">
+        <input type="hidden" name="action" value="register">
         <h2>Rekisteröidy</h2>
         <div class="form-group">
             <label for="username">Käyttäjänimi:</label>
@@ -53,7 +54,7 @@
             <input type="password" name="password-match" required>
         </div>
         <br>
-        <button type="submit">Kirjaudu</button>
+        <button type="submit">Rekisteröidy</button>
         <p>
             Onko sinulla jo tili? <a href="loginPage.html">Kirjaudu sisään</a>.
         </p>
