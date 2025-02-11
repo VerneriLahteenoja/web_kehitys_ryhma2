@@ -1,5 +1,5 @@
 body {
-    background-image: url('./Kuvat/productsbackground.jpg');
+    background-image: url('./kuvat/productsbackground.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -113,8 +113,8 @@ table.pricelist {
     font-size: 1.2rem;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.60);
-    width: 80%;
-    max-width: 1080px;
+    width: 100%;
+    max-width: 1200px;
     margin: 10px auto;
     padding: 30px;
     justify-content: center;
@@ -130,36 +130,38 @@ table.pricelist {
     color: black;
 }
 
-.product {
+.products-details {
+    justify-items:center;
     background-color: white;
     border-radius: 10%;
     padding: 20px;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     text-align: center;
     border: 2px solid #ff0000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.product h3 {
+.products h3 {
+    text-align:center;
     font-size: 1.25rem;
     margin-top: -15px;
     color: #141414;
 }
 
-.product p {
+.products p {
     font-size: 1.1rem;
-    margin-top: -10px;
+    margin-top: -7px;
     color: #141414;
 }
 
-.product img {
-    margin-top: -9px;
-    width: 200px;
-    height: 200px;
+.products img {
+    margin-top: -15px;
+    width: 250px;
+    height: 250px;
 }
 
-.product-heading {
+.products-heading {
     color: white;
     text-transform: uppercase;
     margin-top: -10px;
@@ -167,6 +169,47 @@ table.pricelist {
     text-shadow: 1px 1px #000000;
     font-size: 32px;
 }
+.products h2{
+    margin-top: -10px;
+    color:#141414;
+    font-size: 1.25rem;
+}
+/* Yksittäinen Tuote*/
+
+.product-detail{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width: 750px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 10%;
+    padding: 10px;
+    height: 750px;
+    text-align: center;
+    border: 2px solid #ff0000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.product-detail h1{
+    color:#141414;
+    text-align: center;
+    width: 100%;
+    margin-top: -40px;
+
+}
+.product-detail img{
+    width:350px;
+    height:350px;
+}
+
+.product-detail p{
+    color:#141414;
+    font-size: 1.25rem;
+}
+
 
 /* Yhteystiedot */
 
@@ -246,7 +289,7 @@ table.pricelist {
     }
 
     body {
-        background-image: url('./Kuvat/productsbackgroundmobile.jpg');
+        background-image: url('./kuvat/productsbackgroundmobile.jpg');
         background-size: cover;
         background-position: fixed;
         background-repeat: no-repeat;

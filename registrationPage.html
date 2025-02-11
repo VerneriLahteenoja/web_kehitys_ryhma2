@@ -26,7 +26,7 @@
                         <a class="nav-link" href="pricelist.html">Hinnasto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html">Tuotteet</a>
+                        <a class="nav-link" href="products.php">Tuotteet</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Yhteystiedot</a>
