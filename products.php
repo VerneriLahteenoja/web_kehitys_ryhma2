@@ -57,7 +57,7 @@ include 'admin/settings.php';
     <h2 class="product-heading"><strong>Tuotteet</strong></h2>
     <div class="products">
         <?php
-        $sql= "SELECT id, nimi, hinta, arvostelu, kuva FROM Tuotteet";
+        $sql= "SELECT id, nimi, hinta, arvostelu, kuva FROM tuotteet";
         $stmt=$pdo->prepare($sql);
         $stmt->execute();
         $tuotteet=$stmt->fetchAll(PDO::FETCH_ASSOC);

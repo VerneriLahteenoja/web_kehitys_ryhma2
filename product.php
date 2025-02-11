@@ -7,7 +7,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     die("Tuote id puuttuu tai on väärä.");
 }
 
-$sql="SELECT nimi, hinta, kuvaus, arvostelu, kuva FROM Tuotteet WHERE id = :id";
+$sql="SELECT nimi, hinta, kuvaus, arvostelu, kuva FROM tuotteet WHERE id = :id";
 $stmt=$pdo->prepare($sql);
 $stmt->bindParam(':id', $tuote_id, PDO::PARAM_INT);
 $stmt->execute();
