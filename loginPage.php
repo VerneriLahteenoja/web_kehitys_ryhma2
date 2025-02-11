@@ -10,7 +10,7 @@
 </head>
 <body>
 <header>
-    <a href="index.html"><img src="kuvat/kllogo.png" alt="Logo" width="250" height="250"></a>
+    <a href="index.html"><img src="./Kuvat/kllogo.png" alt="Logo" width="250" height="250"></a>
 </header>
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom" >
         <div class="container-fluid" role="navigation">
@@ -26,7 +26,7 @@
                         <a class="nav-link" href="pricelist.html">Hinnasto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.php">Tuotteet</a>
+                        <a class="nav-link" href="products.html">Tuotteet</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Yhteystiedot</a>
@@ -35,33 +35,23 @@
             </div>
         </div>
     </nav>
-<div class="container">
-    <form class="col-md-4" action="register.php" method="POST">
-        <input type="hidden" name="action" value="register">
-        <h2>Rekisteröidy</h2>
+    <div class="container">
+    <form class="col-md-4" action="login.php" method="POST">
         <div class="form-group">
-            <label for="register_username">Käyttäjänimi:</label>
-            <input class="form-control" type="text" name="register_username" required>
+            <label for="username">Käyttäjänimi:</label>
+            <input class="form-control" type="text" name="username" required>
         </div>
         <br>
         <div class="form-group">
-            <label for="register_password">Salasana:</label>
-            <input type="password" name="register_password" required>
+            <label for="password">Salasana:</label>
+            <input type="password" name="password" required>
         </div>
         <br>
-        <div class="form-group">
-            <label for="register_password_match">Salasana uudelleen:</label>
-            <input type="password" name="register_password_match" required>
-        </div>
-        <br>
-        <button type="submit">Rekisteröidy</button>
-        <p>
-            Onko sinulla jo tili? <a href="loginPage.html">Kirjaudu sisään</a>.
-        </p>
+        <button type="submit">Kirjaudu</button>
     </form>
-</div>
-<footer>
-    <p>&copy; 2025 Kyykkyluola.</p>
-</footer>
+    </div>
+    <footer>
+        <p>&copy; 2025 Kyykkyluola.</p>
+    </footer>
 </body>
 </html>
