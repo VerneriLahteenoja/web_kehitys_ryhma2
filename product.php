@@ -35,7 +35,7 @@ if (!$tuote) {
 
 <body>
 <header>
-        <a href="index.html"><img src="./kuvat/kllogo.png" alt="Logo" width="250" height="250"></a>
+        <a href="index.html"><img src="kuvat/kllogo.png" alt="Logo" width="250" height="250"></a>
     </header>
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom" >
         <div class="container-fluid" role="navigation">
@@ -59,10 +59,10 @@ if (!$tuote) {
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-login">
-                        <a class="nav-link" href="#">Kirjaudu</a>
+                    <a class="nav-link" href="loginPage.html">Kirjaudu</a>
                     </li>
                     <li class="nav-register">
-                        <a class="nav-link" href="#">Rekisteröidy</a>
+                    <a class="nav-link" href="registrationPage.html">Rekisteröidy</a>
                     </li>
                 </ul>
             </div>
