@@ -39,10 +39,10 @@ include 'admin/settings.php';
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-login">
-                    <a class="nav-link" href="loginPage.html">Kirjaudu</a>
+                        <a class="nav-link" href="#">Kirjaudu</a>
                     </li>
                     <li class="nav-register">
-                    <a class="nav-link" href="registrationPage.html">Rekisteröidy</a>
+                        <a class="nav-link" href="#">Rekisteröidy</a>
                     </li>
                 </ul>
             </div>
@@ -54,7 +54,7 @@ include 'admin/settings.php';
     </nav>
 <main>
     <section class="products-container">
-    <h2 class="product-heading"><strong>Tuotteet</strong></h2>
+    <h2 class="products-heading"><strong>Tuotteet</strong></h2>
     <div class="products">
         <?php
         $sql= "SELECT id, nimi, hinta, arvostelu, kuva FROM tuotteet";
@@ -65,10 +65,11 @@ include 'admin/settings.php';
 
         <?php if($tuotteet) { ?>
             <?php foreach ($tuotteet as $tuote) { ?>
-            <div class="product">
-                <a href="product.php?id=<?php echo $tuote['id']; ?>">Näytä Tuote</a>
+            <div class="products-details">
+            <h2><?php echo htmlspecialchars($tuote['nimi']); ?></h2>
+                <a href="product.php?id=<?php echo $tuote['id']; ?>">
                     <img src="kuvat/<?php echo htmlspecialchars($tuote['kuva']); ?>" alt="<?php echo htmlspecialchars($tuote['nimi']); ?>">
-                    <h2><?php echo htmlspecialchars($tuote['nimi']); ?></h2>
+                </a>
                 <p>Hinta: €<?php echo htmlspecialchars($tuote['hinta']); ?></p>
             </div>
         <?php   } ?>
