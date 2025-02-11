@@ -59,10 +59,10 @@ if (!$tuote) {
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-login">
-                    <a class="nav-link" href="loginPage.html">Kirjaudu</a>
+                        <a class="nav-link" href="#">Kirjaudu</a>
                     </li>
                     <li class="nav-register">
-                    <a class="nav-link" href="registrationPage.html">Rekisteröidy</a>
+                        <a class="nav-link" href="#">Rekisteröidy</a>
                     </li>
                 </ul>
             </div>
@@ -72,14 +72,14 @@ if (!$tuote) {
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </nav>
-    <div class="product-details">
+    <div class="product-detail">
     <h1><?php echo htmlspecialchars($tuote['nimi']); ?></h1>
 
     <img src="kuvat/<?php echo htmlspecialchars($tuote['kuva']); ?>" alt="<?php echo htmlspecialchars($tuote['nimi']); ?>">
     
     <p>Hinta: €<?php echo $tuote['hinta']; ?></p>
 
-    <p>Kuvaus: <?php echo $tuote['kuvaus']; ?></p>
+    <p><?php echo $tuote['kuvaus']; ?></p>
 
     <p>Arvostelu: <?php echo htmlspecialchars ($tuote['arvostelu']); ?></p>
 
