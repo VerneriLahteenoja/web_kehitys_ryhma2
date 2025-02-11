@@ -1,3 +1,4 @@
+<?php include "settings.php" ?>
 <!DOCTYPE html>
 <html lang="fi">
 <head>
