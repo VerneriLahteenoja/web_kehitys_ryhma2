@@ -30,7 +30,7 @@
         <div class="card p-3">
             <h3>Käyttäjät</h3>
             <p>Hallitse käyttäjätilejä.</p>
-            <a href="#" class="btn btn-primary">Avaa</a>
+            <a href="manageUsers.php" class="btn btn-primary">Avaa</a>
         </div>
     </div>
     <div class="col-md-4">
