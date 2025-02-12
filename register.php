@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'admin/settings.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
