@@ -39,10 +39,10 @@ include 'admin/settings.php';
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-login">
-                        <a class="nav-link" href="loginPage.php">Kirjaudu</a>
+                    <a class="nav-link" href="loginPage.html">Kirjaudu</a>
                     </li>
                     <li class="nav-register">
-                        <a class="nav-link" href="registrationPage.php">Rekisteröidy</a>
+                    <a class="nav-link" href="registrationPage.php">Rekisteröidy</a>
                     </li>
                 </ul>
             </div>

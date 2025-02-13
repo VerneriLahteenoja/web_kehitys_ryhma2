@@ -1,4 +1,5 @@
 <?php
+
 include 'admin/settings.php';
 
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
@@ -7,19 +8,22 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     die("Tuote id puuttuu tai on väärä.");
 }
 
-$sql="SELECT nimi, hinta, kuvaus, arvostelu, kuva FROM tuotteet WHERE id = :id";
+$sql="SELECT id, nimi, hinta, kuvaus, arvostelu, kuva FROM tuotteet WHERE id = :id";
 $stmt=$pdo->prepare($sql);
 $stmt->bindParam(':id', $tuote_id, PDO::PARAM_INT);
 $stmt->execute();
-
 $tuote = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$tuote) {
     die ("Tuotetta ei löytynyt.");
 }
+
+$sql="SELECT arvosana, kommentti, luotu FROM arvostelut WHERE tuote_id = :id ORDER BY luotu DESC";
+$stmt=$pdo->prepare($sql);
+$stmt->execute(['id'=> $tuote_id]);
+$arvostelut = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="fi">
@@ -59,10 +63,10 @@ if (!$tuote) {
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-login">
-                        <a class="nav-link" href="#">Kirjaudu</a>
+                    <a class="nav-link" href="loginPage.html">Kirjaudu</a>
                     </li>
                     <li class="nav-register">
-                        <a class="nav-link" href="#">Rekisteröidy</a>
+                    <a class="nav-link" href="registrationPage.php">Rekisteröidy</a>
                     </li>
                 </ul>
             </div>
@@ -81,9 +85,40 @@ if (!$tuote) {
 
     <p><?php echo $tuote['kuvaus']; ?></p>
 
-    <p>Arvostelu: <?php echo htmlspecialchars ($tuote['arvostelu']); ?></p>
+    <div class="product-review">
+    <h2>Mitä mieltä muut ovat tästä tuotteesta?</h2>
+    <?php if ($arvostelut): ?>
+        <ul>
+            <?php foreach ($arvostelut as $arvostelu): ?>
+                <li><strong><?php echo $arvostelu ['arvosana']; ?>/5 ⭐</strong> - <?php echo htmlspecialchars($arvostelu['kommentti']); ?> 
+                    <em>(<?php echo $arvostelu['luotu']; ?>)</em>
+                </li>
+                <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+        <p>Tällä tuotteella ei ole vielä arvosteluja</p>
+    <?php endif; ?>
 
-    <a href="products.php"> Takaisin Kaikkiin Tuotteisiin</a>
+    <h3>Arvostele tämä tuote<br> ↓</h3>
+    <?php if (isset($tuote['id'])): ?>
+    <form action="addReview.php" method="POST">
+        <input type="hidden" name="tuote_id" value="<?php echo htmlspecialchars($tuote['id']); ?>">
+        <label for="arvosana">Arvosana (1-5):</label>
+        <select name="arvosana" id="arvosana" required>
+            <option value="1">1⭐</option>
+            <option value="2">2⭐</option>
+            <option value="3">3⭐</option>
+            <option value="4">4⭐</option>
+            <option value="5">5⭐</option>
+        </select><br>
+        <label for="kommentti" max="100">Lisä kommentti? (vapaaehtoinen)</label><br>
+        <textarea name="kommentti" id="kommentti"></textarea><br>
+        <button type="submit"> Lähetä arvostelu</button>
+    </form>
+    <?php else: ?>
+        <p>Virhe: Tuote id puuttuu.</p>
+    <?php endif; ?>
+    <a href="products.php"> <-Takaisin Kaikkiin Tuotteisiin.</a>
     
 </body>
 </html>
