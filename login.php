@@ -26,9 +26,14 @@
         $stmt->execute([$username, $password]);
         $logged_user = $stmt->fetch(PDO::FETCH_ASSOC);
     
-        session_start();
-        $_SESSION['logged_user'] = $logged_user;
-        
+        if ($logged_user) {
+            session_start();
+            $_SESSION['logged_user'] = $logged_user['nimi'];
+            $_SESSION['user_role'] = $logged_user['rooli'];
+            header("Location: users.php");
+        } else {
+            echo "Virheellinen käyttäjänimi tai salasana.";
+        }
     } catch (PDOException $e) {
         echo "Virhe: " . $e->getMessage();
         exit();
