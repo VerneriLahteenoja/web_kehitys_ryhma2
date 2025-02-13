@@ -39,7 +39,7 @@ $arvostelut = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <body>
 <header>
-        <a href="index.html"><img src="kuvat/kllogo.png" alt="Logo" width="250" height="250"></a>
+        <a href="index.php"><img src="kuvat/kllogo.png" alt="Logo" width="250" height="250"></a>
     </header>
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom" >
         <div class="container-fluid" role="navigation">
@@ -49,7 +49,7 @@ $arvostelut = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Etusivu</a>
+                    <a class="nav-link" href="index.php">Etusivu</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="pricelist.html">Hinnasto</a>
@@ -62,12 +62,7 @@ $arvostelut = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-login">
-                    <a class="nav-link" href="loginPage.php">Kirjaudu</a>
-                    </li>
-                    <li class="nav-register">
-                    <a class="nav-link" href="registrationPage.php">Rekisteröidy</a>
-                    </li>
+                    <?php include "loginLogoutNav.php" ?>
                 </ul>
             </div>
         </div>

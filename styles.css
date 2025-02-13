@@ -248,6 +248,11 @@ table.pricelist {
     font-size: 1.30rem;
 }
 
+.product-review p{
+    top: -40px;
+    position:relative;
+}
+
 
 
 .product-review h3{
