@@ -35,25 +35,20 @@ try {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Etusivu</a>
+                    <a class="nav-link" href="index.php">Etusivu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pricelist.html">Hinnasto</a>
+                    <a class="nav-link" href="pricelist.php">Hinnasto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="products.html">Tuotteet</a>
+                    <a class="nav-link" href="products.php">Tuotteet</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Yhteystiedot</a>
+                    <a class="nav-link" href="contact.php">Yhteystiedot</a>
                 </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-login">
-                        <a class="nav-link" href="loginPage.html">Kirjaudu</a>
-                    </li>
-                    <li class="nav-register">
-                        <a class="nav-link" href="registrationPage.html">Rekisteröidy</a>
-                    </li>
+                    <?php include "loginLogoutNav.php" ?>
                 </ul>
             </div>
         </div>
