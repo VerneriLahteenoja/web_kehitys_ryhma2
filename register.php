@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':salasana', $salasana);
         $stmt->execute();
 
-        echo "Rekisteröinti onnistui. <a href='loginPage.html'>Kirjaudu sisään</a>";
+        echo "Rekisteröinti onnistui. <a href='loginPage.php'>Kirjaudu sisään</a>";
     } catch (PDOException $e) {
         echo("Virhe: " . $e->getMessage());
     }

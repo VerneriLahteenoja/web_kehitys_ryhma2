@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':nimi', $nimi, PDO::PARAM_STR);
         $stmt->execute();
 
-        echo "Käyttäjä poistettu onnistuneesti.";
+        header("Location: users.php");
 
     } catch (PDOException $e) {
         echo "Virhe: " . $e->getMessage();

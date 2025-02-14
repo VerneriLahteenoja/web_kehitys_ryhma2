@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':rooli', $rooli, PDO::PARAM_STR);
         $stmt->execute();
 
-        echo "Käyttäjä päivitetty onnistuneesti.";
+        header("Location: users.php");
     } catch (PDOException $e) {
         echo "Virhe: " . $e->getMessage();
         exit;
