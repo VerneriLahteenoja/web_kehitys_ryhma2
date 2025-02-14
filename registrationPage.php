@@ -57,7 +57,7 @@
         <br>
         <button type="submit">Rekisteröidy</button>
         <p>
-            Onko sinulla jo tili? <a href="loginPage.html">Kirjaudu sisään</a>.
+            Onko sinulla jo tili? <a href="loginPage.php">Kirjaudu sisään</a>.
         </p>
     </form>
 </div>
