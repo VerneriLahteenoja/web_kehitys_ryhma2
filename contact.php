@@ -1,3 +1,7 @@
+<?php
+session_start();
+include 'admin/settings.php';
+?>
 <!DOCTYPE html>
 <html lang="fi">
 <head>

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'admin/settings.php';
 
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {

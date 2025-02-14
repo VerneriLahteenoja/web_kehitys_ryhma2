@@ -4,6 +4,8 @@
             <li class='nav-login'>
             <a class='nav-link' href='logout.php'>Kirjaudu ulos</a>
             </li>
+            <li class='nav-login'>
+            <a class='nav-link' href='users.php'>Käyttäjälista</a>
         ";
     } else {
         echo "
