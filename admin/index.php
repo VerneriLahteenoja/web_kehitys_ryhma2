@@ -13,6 +13,9 @@
 
     <header class="navbar navbar-dark bg-dark p-3">
         <a href="index.php" class="navbar-brand">Admin Page</a>
+    <div class="ms-auto">
+        <a href="manageProducts.php" class="btn btn-outline-light me-2">Tuotteet</a>
+        <a href="manageUsers.php" class="btn btn-outline-light">Käyttäjät</a>
     </header>
 
     <main class="container flex-grow-1">
@@ -23,7 +26,7 @@
         <div class="card p-3">
             <h3>Tuotteet</h3>
             <p>Hallitse verkkosivun tuotteita.</p>
-            <a href="#" class="btn btn-primary">Avaa</a>
+            <a href="manageProducts.php" class="btn btn-primary">Avaa</a>
         </div>
     </div>
     <div class="col-md-4">

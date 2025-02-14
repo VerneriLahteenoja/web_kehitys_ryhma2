@@ -25,6 +25,9 @@ try {
 <body class="d-flex flex-column min-vh-100">
     <header class="navbar navbar-dark bg-dark p-3">
         <a href="index.php" class="navbar-brand">Admin Page</a>
+    <div class="ms-auto">
+        <a href="manageProducts.php" class="btn btn-outline-light me-2">Tuotteet</a>
+        <a href="manageUsers.php" class="btn btn-outline-light">Käyttäjät</a>
     </header>
 
     <main class="container flex-grow-1">
