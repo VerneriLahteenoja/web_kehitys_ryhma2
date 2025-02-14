@@ -25,7 +25,7 @@ try {
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="kuvat/kllogo.png" alt="Logo" width="250" height="250"></a>
+        <a href="index.php"><img src="kuvat/kllogo.png" alt="Logo" width="250" height="250"></a>
     </header>
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom" >
         <div class="container-fluid" role="navigation">
