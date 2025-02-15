@@ -8,10 +8,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($nimi) || empty($salasana) || empty($salasanaMatch)) {
         echo("Kaikki kentät pitää täyttää.");
+        exit;
     }
 
     if ($salasana !== $salasanaMatch) {
         echo("Salasanat eivät täsmää.");
+        exit;
     }
 
     $checkUserSql = "SELECT COUNT(*) FROM kayttajat WHERE nimi = :nimi";
@@ -22,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($userExists) {
         echo("Käyttäjänimi on jo käytössä.");
+        exit;
     }
 
     try {
