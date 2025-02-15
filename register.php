@@ -37,6 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Rekisteröinti onnistui. <a href='loginPage.php'>Kirjaudu sisään</a>";
     } catch (PDOException $e) {
         echo("Virhe: " . $e->getMessage());
+        exit;
     }
 }
 ?>
